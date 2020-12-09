@@ -8,11 +8,11 @@ Windows 10,
 Python 3.9.0,
 Visual Studio Code
     Extensions:
-        Python (Microsoft)
+        Python (Microsoft),
         Pylance (Microsoft)
 
 Download and save your input files in the 'input' folder.
-    Name each file dn_input.txt e.g. 'd1_input.txt'
+    Name each file 'dn_input.txt' e.g. 'd1_input.txt'
 
 Input files are read using the 'aoc_read_input' function in 'aoc_utils.py'
 
