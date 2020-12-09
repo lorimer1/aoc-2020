@@ -1,11 +1,11 @@
+import logging
+import time
 import sys
 import os
 
 # read all text from an input file for a given day e.g. day=6, the filepath will be '..\input\d6_input.txt'
 # 'extra' can be used for test input files e.g. extra='_part1_test1', the filepath will be '..\input\d6_input_part1_test1.txt'
-
-
-def read_input_file(year, day, extra=""):
+def aoc_read_input(year, day, extra=""):
 
     # path of this file
     path = os.path.dirname(__file__)
@@ -48,3 +48,30 @@ def read_input_file(year, day, extra=""):
         file_content = input_file.read()
 
     return file_content
+
+def aoc_timer(year=0, day=0, part=0):
+    part = {1: 'one', 2: 'two'}.get(part)
+    prepend = ''
+    if year:
+        prepend += '%s.' % year
+    if day:
+        prepend += '%s ' % day
+    if part:
+        prepend += 'part %s: ' % part
+    def decorator(func):
+        # @functools.wraps(func)
+        def wrapper(*a, **kw):
+            try:
+                start = time.perf_counter()
+                result = func(*a, **kw)
+                delta = (time.perf_counter() - start) * 1000
+                if not prepend:
+                    print(f'finished {func.__name__} in {delta:.4f} ms')
+                else:
+                    print(f'{prepend}{result} ({delta:.4f} ms)')
+            except Exception as e:
+                logging.exception(f'exception when solving {prepend}: {e}')
+            else:
+                return result
+        return wrapper
+    return decorator
