@@ -1,16 +1,18 @@
 #replace 'template' with 'dayn'
 import unittest
 from aoc_utils import aoc_read_input
-from template import YEAR, DAY, part1, part2
+from template import YEAR, DAY, parse_input, part1, part2
 
 class aoc_test(unittest.TestCase):
 
     def test_part1_test1(self):
-        test_input = aoc_read_input(YEAR, DAY, extra='_part1_test1')
+        puzzle_input = aoc_read_input(YEAR, DAY, extra='_part1_test1')
+        test_input = parse_input(puzzle_input)
         self.assertEqual(part1(test_input), "todo")
 
-    # def test_part1_test1(self):
-    #     test_input = aoc_download.read_input_file(YEAR, DAY, extra='_part2_test1')
+    # def test_part2_test1(self):
+    #     puzzle_input = aoc_read_input(YEAR, DAY, extra='_part2_test1')
+    #     test_input = parse_input(puzzle_input)
     #     self.assertEqual(part2(test_input), "todo")
 
 if __name__ == '__main__':
