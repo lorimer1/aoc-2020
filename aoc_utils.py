@@ -49,31 +49,14 @@ def aoc_read_input(year, day, extra=""):
 
     return file_content
 
-# Assists with outputing the result of part 1 or part 2 of an aoc day challenge ... includes the time taken for the part to execute
-# Can also be used for other functions by not specifying year, month and day. In this case, the function output is not printed ... just function name and timing information.
-def aoc_timer(year=0, day=0, part=0):
-    part = {1: 'one', 2: 'two'}.get(part)
-    prepend = ''
-    if year:
-        prepend += '%s.' % year
-    if day:
-        prepend += '%s ' % day
-    if part:
-        prepend += 'part %s: ' % part
+# Decorator to wrap timing info for a function
+def aoc_timer():
     def decorator(func):
-        # @functools.wraps(func) ... func.__name__ reports wrapper rather than func
         def wrapper(*a, **kw):
-            try:
-                start = time.perf_counter()
-                result = func(*a, **kw)
-                delta = (time.perf_counter() - start) * 1000
-                if not prepend:
-                    print(f'finished {func.__name__} in {delta:.4f} ms')
-                else:
-                    print(f'{prepend}{result} ({delta:.4f} ms)')
-            except Exception as e:
-                logging.exception(f'exception when solving {prepend}: {e}')
-            else:
-                return result
+            start = time.perf_counter()
+            result = func(*a, **kw)
+            delta = (time.perf_counter() - start) * 1000
+            print(f'finished {func.__name__} in {delta:.4f} ms')
+            return result
         return wrapper
     return decorator
