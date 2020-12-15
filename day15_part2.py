@@ -6,16 +6,16 @@ from aoc_utils import aoc_read_input, aoc_timer
 
 @aoc_timer()
 def solve(input):
-    spoken = list(map(int,input.split(',')))
-    latest = spoken[-1]
-    positions = {k:v+1 for v, k in enumerate(spoken[:-1])}
-    for turn in range(len(spoken),30000000):
+    starting_nums = list(map(int,input.split(',')))
+    latest_num = starting_nums[-1]
+    spoken = {k:v+1 for v, k in enumerate(starting_nums[:-1])}
+    for turn in range(len(starting_nums),30000000):
         new_num = 0
-        if latest in positions:
-            new_num = turn - positions[latest]
-        positions[latest] = turn
-        latest = new_num
-    return latest
+        if latest_num in spoken:
+            new_num = turn - spoken[latest_num]
+        spoken[latest_num] = turn
+        latest_num = new_num
+    return latest_num
 
 if __name__ == '__main__':
     puzzle_input = aoc_read_input(YEAR, DAY)

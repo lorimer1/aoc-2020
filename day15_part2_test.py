@@ -7,7 +7,7 @@ class aoc_test(unittest.TestCase):
 
     def test(self):
         test_input = aoc_read_input(YEAR, DAY, extra='_test')
-        self.assertEqual(solve(test_input), 436)
+        self.assertEqual(solve(test_input), 175594)
 
 if __name__ == '__main__':
     unittest.main()

@@ -6,9 +6,9 @@ from aoc_utils import aoc_read_input, aoc_timer
 
 @aoc_timer()
 def solve(input):
-    spoken = list(map(int,input.split(',')))
-    latest = spoken[-1]
-    spoken = list(reversed(spoken[:-1]))
+    starting_nums = list(map(int,input.split(',')))
+    latest = starting_nums[-1]
+    spoken = list(reversed(starting_nums[:-1]))
     for turn in range(len(spoken)+1,2020):
         new_num = 0
         if latest in spoken:
