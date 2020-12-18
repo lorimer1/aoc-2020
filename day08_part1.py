@@ -4,9 +4,23 @@ YEAR=2020; DAY=8; PART=1
 
 from aoc_utils import aoc_read_input, aoc_timer
 
+
 @aoc_timer()
 def solve(input):
-    return "todo"
+    prog = [(line.split()[0],int(line.split()[1])) for line in input.splitlines()]
+    iptr,acc=0,0
+    visited=[]
+    while not (iptr in visited):
+        visited.append(iptr)
+        opcode,operand=prog[iptr]
+        if opcode=='nop':
+            iptr+=1
+        elif opcode=='acc':
+            acc+=operand
+            iptr+=1
+        elif opcode=='jmp':
+            iptr+=operand
+    return acc
 
 if __name__ == '__main__':
     puzzle_input = aoc_read_input(YEAR, DAY)
