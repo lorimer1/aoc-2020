@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=11; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 from copy import deepcopy
 import math
 
@@ -73,7 +73,7 @@ def seat_test(grid, test_seat, test_angles):
             return "#"
     return "."
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     test_angles = get_test_angles()
     grid_current = []
@@ -86,5 +86,5 @@ def solve(input):
     return sum(s.count('#') for s in grid_current)
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

@@ -1,12 +1,12 @@
 #replace 'template' with 'dayn'
 import unittest
-from aoc_utils import aoc_read_input
+import aoc
 from template import YEAR, DAY, solve
 
 class aoc_test(unittest.TestCase):
 
     def test(self):
-        test_input = aoc_read_input(YEAR, DAY, extra='_test')
+        test_input = aoc.puzzle_input(YEAR, DAY, is_test=True)
         self.assertEqual(solve(test_input), "todo")
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=11; PART=1
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 from copy import deepcopy
 
 def seat_status(grid, row, col):
@@ -32,7 +32,7 @@ def seat_test(grid, row, col):
             return "#"
     return "."
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     grid_current = []
     grid_next = [list(line) for line in input.splitlines()]
@@ -47,5 +47,5 @@ def solve(input):
     return sum(s.count('#') for s in grid_current)
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

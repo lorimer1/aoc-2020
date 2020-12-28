@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=12; PART=1
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 N=0; E=1; S=2; W=3
 DIRS = ['N','E','S','W']
@@ -16,7 +16,7 @@ def get_new_dir(current_dir, dir, degrees):
         new_index = abs((index - steps) % 4)
     return DIRS[new_index]
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     units = {'N':0, 'E':0, 'S':0, 'W':0}
     current_dir = DIRS[E]
@@ -39,5 +39,5 @@ def solve(input):
     return abs(units['N']-units['S']) + abs(units['E']-units['W'])
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

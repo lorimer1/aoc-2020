@@ -2,14 +2,14 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=17; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 import copy
 
 ACTIVE, INACTIVE = '#','.'
 CYCLES = 6
 OFFSETS = (-1,0,1)
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     grid = {}
 
@@ -60,5 +60,5 @@ def solve(input):
     return len([v for v in grid.values() if v==ACTIVE])  
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=12; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 N=0; E=1; S=2; W=3
 DIRS = ['N','E','S','W']
@@ -33,7 +33,7 @@ def get_new_pos(position, dir, degrees):
         position['E'] = -1 * position['E']
     return position
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     way_rel_pos = {'N':1, 'E':10}
     ship_pos = {'N':0, 'E':0}
@@ -57,5 +57,5 @@ def solve(input):
     return abs(ship_pos['N']) + abs(ship_pos['E'])
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

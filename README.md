@@ -14,7 +14,7 @@ Visual Studio Code
 Download and save your input files in the 'input' folder.
     Name each file 'dn_input.txt' e.g. 'd1_input.txt'
 
-Input files are read using the 'aoc_read_input' function in 'aoc_utils.py'
+Input files are read using the 'aoc_aoc.puzzle_input' function in 'aoc.py'
 
 If you wish to use the automated download feature:
     Install the 'requests' module into Python i.e. 'python -m pip install requests'
@@ -23,7 +23,7 @@ If you wish to use the automated download feature:
         To obtain the cookie e.g. chrome ... right-click the padlock in the address bar and click cookies (use the value of the cookie named 'session' for advent of code site)
 
 # New Python things I tried this year
-Decorators: Custom decorator 'aoc_timer' was added to my functions to calculate and print timing information. This basically wraps the functions inside extra code that will time the running of the functions and print the return value of the functions with timing information. The decorator code is in 'aoc_utils.py'
+Decorators: Custom decorator 'aoc_timer' was added to my functions to calculate and print timing information. This basically wraps the functions inside extra code that will time the running of the functions and print the return value of the functions with timing information. The decorator code is in 'aoc.py'
 
 
 

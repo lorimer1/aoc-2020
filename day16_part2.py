@@ -6,7 +6,7 @@ from os import replace
 import math
 import copy
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 criteria = {}
 our_ticket = []
@@ -51,7 +51,7 @@ def field_not_allocated(field_possibilities):
     return False
 
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input, qualifier):
     parse_input(input)
     
@@ -102,5 +102,5 @@ def solve(input, qualifier):
     
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input, 'departure'))

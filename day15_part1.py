@@ -2,9 +2,9 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=15; PART=1
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     starting_nums = list(map(int,input.split(',')))
     latest = starting_nums[-1]
@@ -18,5 +18,5 @@ def solve(input):
     return latest
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

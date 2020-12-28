@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=9; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 from collections import deque
 from itertools import combinations 
 
@@ -18,7 +18,7 @@ def solve_part1(input, preamble):
             else: 
                 return num
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input, preamble):
     part1 = solve_part1(input, preamble) 
     nums = list(map(int,input.splitlines()))
@@ -31,5 +31,5 @@ def solve(input, preamble):
                 return min(nums[start:stop]) + max(nums[start:stop])
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input,preamble=25))

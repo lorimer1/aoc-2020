@@ -3,7 +3,7 @@
 YEAR=2020; DAY=3; PART=1
 
 from typing import NamedTuple
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 class Point(NamedTuple):
     x: int
@@ -19,7 +19,7 @@ def tree_counter(tree_locations, location=Point(0,0), tree_count=0, slope=None):
     new_location = Point((location.x + slope.x) % width, location.y + slope.y) # use modulus to account for repeating horizontal pattern
     return tree_counter(tree_locations, new_location, tree_count, slope) if new_location.y < height else tree_count # continue recursion until the bottom is reached
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input): 
     global width; global height
     lines = list(input.splitlines())
@@ -28,5 +28,5 @@ def solve(input):
     return tree_counter(tree_locations, slope=Point(3,1))
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

@@ -2,9 +2,9 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=13; PART=1
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     arrival, timetable = input.splitlines()
     bus_wait_times = {}
@@ -16,5 +16,5 @@ def solve(input):
     return best_bus * bus_wait_times[best_bus]
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

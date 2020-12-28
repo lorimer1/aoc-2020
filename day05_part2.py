@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=5; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 def binary_to_decimal(binary):
     decimal, pos = 0, 0
@@ -36,7 +36,7 @@ def get_seat(barcode):
 
     return seat
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     seats=[]
     lines = input.splitlines()
@@ -46,5 +46,5 @@ def solve(input):
     return missing_seats[0]
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

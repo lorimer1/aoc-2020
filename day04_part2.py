@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=4; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 import re
 
 def is_valid(passport):
@@ -41,7 +41,7 @@ def is_valid(passport):
     # if 'cid' not in passport: return False
     return True
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     count = 0
     passport = {}
@@ -63,5 +63,5 @@ def solve(input):
     return count
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

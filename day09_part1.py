@@ -4,9 +4,9 @@ YEAR=2020; DAY=9; PART=1
 
 from collections import deque
 from itertools import combinations 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input, preamble):
     nums = list(map(int,input.splitlines()))
     q = deque(maxlen = preamble)
@@ -20,5 +20,5 @@ def solve(input, preamble):
                 return num
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input, preamble=25))

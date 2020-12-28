@@ -3,7 +3,7 @@
 YEAR=2020; DAY=16; PART=1
 
 from os import replace
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 criteria = {}
 our_ticket = []
@@ -40,7 +40,7 @@ def parse_input(input):
         if step=='parse nearby tickets':
             nearby_tickets.append( list(map(int,line.split(','))) )   
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     parse_input(input)
     
@@ -57,5 +57,5 @@ def solve(input):
     return answer
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

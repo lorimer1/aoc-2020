@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=14; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 import re
 
 def get_addresses(pattern, addresses):
@@ -30,7 +30,7 @@ def mask_vals(address, mask):
         addresses.append(int(address_binary, 2))
     return addresses
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     mask = ''
     program = {}
@@ -50,5 +50,5 @@ def solve(input):
     return sum( program.values() )
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

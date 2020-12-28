@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=8; PART=2
 
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 import copy
 
 def run(test_prog):
@@ -21,7 +21,7 @@ def run(test_prog):
             iptr+=operand
     return acc, iptr==terminated
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     prog = [(line.split()[0],int(line.split()[1])) for line in input.splitlines()]
     index=-1
@@ -41,5 +41,5 @@ def solve(input):
 
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))

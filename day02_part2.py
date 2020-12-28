@@ -3,7 +3,7 @@
 YEAR=2020; DAY=2; PART=2
 
 from typing import NamedTuple
-from aoc_utils import aoc_read_input, aoc_timer
+import aoc
 
 class Password_Record(NamedTuple):
     min: int
@@ -11,7 +11,7 @@ class Password_Record(NamedTuple):
     letter: str
     password: str
 
-@aoc_timer()
+@aoc.puzzle_timer()
 def solve(input):
     lines = input.splitlines()
     records = []
@@ -24,5 +24,5 @@ def solve(input):
     return len(compliant_records)
 
 if __name__ == '__main__':
-    puzzle_input = aoc_read_input(YEAR, DAY)
+    puzzle_input = aoc.puzzle_input(YEAR, DAY)
     print(f'Part {PART}: ', solve(puzzle_input))
