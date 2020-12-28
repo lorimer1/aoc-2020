@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=14; PART=2
 
-import aoc
+from utils import aoc
 import re
 
 def get_addresses(pattern, addresses):

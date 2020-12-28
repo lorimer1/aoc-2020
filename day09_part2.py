@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=9; PART=2
 
-import aoc
+from utils import aoc
 from collections import deque
 from itertools import combinations 
 

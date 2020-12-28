@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=12; PART=2
 
-import aoc
+from utils import aoc
 
 N=0; E=1; S=2; W=3
 DIRS = ['N','E','S','W']

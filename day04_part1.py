@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=4; PART=1
 
-import aoc
+from utils import aoc
 
 def is_valid(passport):
     if 'byr' not in passport: return False

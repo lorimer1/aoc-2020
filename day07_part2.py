@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=7; PART=2
 
-import aoc
+from utils import aoc
 from functools import lru_cache
 import re
 

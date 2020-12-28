@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=11; PART=2
 
-import aoc
+from utils import aoc
 from copy import deepcopy
 import math
 

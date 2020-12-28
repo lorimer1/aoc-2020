@@ -6,7 +6,7 @@ from os import replace
 import math
 import copy
 
-import aoc
+from utils import aoc
 
 criteria = {}
 our_ticket = []

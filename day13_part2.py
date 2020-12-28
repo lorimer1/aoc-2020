@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=13; PART=2
 
-import aoc
+from utils import aoc
 
 @aoc.puzzle_timer()
 def solve(input):

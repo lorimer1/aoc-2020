@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=11; PART=1
 
-import aoc
+from utils import aoc
 from copy import deepcopy
 
 def seat_status(grid, row, col):

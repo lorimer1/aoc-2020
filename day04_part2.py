@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=4; PART=2
 
-import aoc
+from utils import aoc
 import re
 
 def is_valid(passport):

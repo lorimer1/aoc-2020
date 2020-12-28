@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=5; PART=1
 
-import aoc
+from utils import aoc
 
 def binary_to_decimal(binary):
     decimal, pos = 0, 0

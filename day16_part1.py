@@ -3,7 +3,7 @@
 YEAR=2020; DAY=16; PART=1
 
 from os import replace
-import aoc
+from utils import aoc
 
 criteria = {}
 our_ticket = []

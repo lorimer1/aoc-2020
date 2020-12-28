@@ -3,7 +3,7 @@
 YEAR=2020; DAY=18; PART=1
 
 from os import add_dll_directory
-import aoc
+from utils import aoc
 from collections import deque
 import re
 import operator

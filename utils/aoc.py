@@ -13,6 +13,7 @@ def puzzle_input(year, day, is_test=False, extra=""):
 
     # path of this file
     path = os.path.dirname(__file__)
+    path = os.path.abspath(os.path.join(path, os.pardir))
 
     # full path of the file required
     filepath = f"{path}\\input{test_suffix}\\d{str(day)}{extra}.txt"

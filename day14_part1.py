@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=14; PART=1
 
-import aoc
+from utils import aoc
 import re
 
 def mask_val( val, mask ):

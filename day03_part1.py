@@ -3,7 +3,7 @@
 YEAR=2020; DAY=3; PART=1
 
 from typing import NamedTuple
-import aoc
+from utils import aoc
 
 class Point(NamedTuple):
     x: int

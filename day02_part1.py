@@ -3,7 +3,7 @@
 YEAR=2020; DAY=2; PART=1
 
 from typing import NamedTuple
-import aoc
+from utils import aoc
 
 class Password_Record(NamedTuple):
     min: int

@@ -1,6 +1,6 @@
 #replace 'template' with 'dayn'
 import unittest
-import aoc
+from utils import aoc
 from day16_part1 import YEAR, DAY, solve
 
 class aoc_test(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-import aoc
+from utils import aoc
 from day01_part2 import YEAR, DAY, solve
 
 class aoc_test(unittest.TestCase):

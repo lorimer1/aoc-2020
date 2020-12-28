@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=17; PART=1
 
-import aoc
+from utils import aoc
 import copy
 
 ACTIVE, INACTIVE = '#','.'

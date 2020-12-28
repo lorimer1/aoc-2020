@@ -4,7 +4,7 @@ YEAR=2020; DAY=9; PART=1
 
 from collections import deque
 from itertools import combinations 
-import aoc
+from utils import aoc
 
 @aoc.puzzle_timer()
 def solve(input, preamble):

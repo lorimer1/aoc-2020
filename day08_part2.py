@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=8; PART=2
 
-import aoc
+from utils import aoc
 import copy
 
 def run(test_prog):

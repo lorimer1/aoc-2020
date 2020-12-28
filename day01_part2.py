@@ -2,7 +2,7 @@
 # Author = Rob Lorimer
 YEAR=2020; DAY=1; PART=2
 
-import aoc
+from utils import aoc
 from itertools import combinations 
 
 @aoc.puzzle_timer()
