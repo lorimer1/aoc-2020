@@ -9,14 +9,14 @@ import os
 def puzzle_input(year, day, is_test=False, extra=""):
 
     # use test folder for test input
-    test_suffix = '_tests' if is_test else ''
+    folder = '\\tests\\input' if is_test else 'input'
 
     # path of this file
     path = os.path.dirname(__file__)
     path = os.path.abspath(os.path.join(path, os.pardir))
 
     # full path of the file required
-    filepath = f"{path}\\input{test_suffix}\\d{str(day)}{extra}.txt"
+    filepath = f"{path}\\{folder}\\d{str(day)}{extra}.txt"
 
     # if an aoc input file, check if already exists on pc otherwise download it
     if not is_test:
