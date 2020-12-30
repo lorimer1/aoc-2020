@@ -12,9 +12,9 @@ Visual Studio Code
         Pylance (Microsoft)
 
 Download and save your input files in the 'input' folder.
-    Name each file 'dn_input.txt' e.g. 'd1_input.txt'
+    Name each file 'dn.txt' e.g. 'd1.txt'
 
-Input files are read using the 'aoc_aoc.puzzle_input' function in 'aoc.py'
+Input files are read using the 'aoc.puzzle_input' function in 'utils\aoc.py'
 
 If you wish to use the automated download feature:
     Install the 'requests' module into Python i.e. 'python -m pip install requests'
