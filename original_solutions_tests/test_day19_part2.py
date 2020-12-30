@@ -5,7 +5,7 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils import aoc
-from template import YEAR, DAY, solve
+from original_solutions.day19_part2 import YEAR, DAY, solve
 
 class aoc_test(unittest.TestCase):
 

@@ -1,6 +1,6 @@
 # Advent of code
 # Author = Rob Lorimer
-YEAR=2020; DAY=1; PART=1
+YEAR=2020; DAY=19; PART=1
 
 # add project directory to path
 import sys, os

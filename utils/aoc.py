@@ -6,10 +6,10 @@ import os
 # read all text from an input file for a given day e.g. day=6, the filepath will be '..\input\d6.txt'
 # is_test=True will look in input_tests directory for for files
 # 'extra' can be used for multiple test input files e.g. extra='_2', the filepath will be '..\input_tests\d6_2.txt'
-def puzzle_input(year, day, is_test=False, extra=""):
+def puzzle_input(year, day, is_original_solutions=True, is_test=False, extra=""):
 
     # use test folder for test input
-    folder = '\\tests\\input' if is_test else 'input'
+    folder = '\\input_tests' if is_test else 'input'
 
     # path of this file
     path = os.path.dirname(__file__)
