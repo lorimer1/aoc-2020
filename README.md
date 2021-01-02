@@ -23,7 +23,13 @@ If you wish to use the automated download feature:
         To obtain the cookie e.g. chrome ... right-click the padlock in the address bar and click cookies (use the value of the cookie named 'session' for advent of code site)
 
 # New Python things I tried this year
-Decorators: Custom decorator 'aoc_timer' was added to my functions to calculate and print timing information. This basically wraps the functions inside extra code that will time the running of the functions and print the return value of the functions with timing information. The decorator code is in 'aoc.py'
+## Decorators 
+Custom decorator 'aoc_timer' was added to my functions to calculate and print timing information. This basically wraps the functions inside extra code that will time the running of the functions and print the return value of the functions with timing information. The decorator code is in 'aoc.py'
 
+## Modular Approach
+Grouped files into folders to improve navigation.
+
+## 'Original' vs 'Better' Solutions
+'Original' solutions are those I created before reviewing how others solved the same problem. 'Better' solutions were created after reviewing others work. Generally, the better solutions are more efficient and more readable i.e. using techniques that I wish to include in my future work.
 
 
