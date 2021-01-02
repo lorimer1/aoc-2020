@@ -12,7 +12,7 @@ from itertools import count
 
 @aoc.puzzle_timer()
 def solve(input):
-    grid = list(input.splitlines())
+    grid = tuple(input.splitlines())
     height, width = len(grid), len(grid[0])
 
     trees = 0
