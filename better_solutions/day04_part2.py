@@ -37,6 +37,8 @@ def solve(input):
 
         if all(required_field in potential_passport for required_field in required_fields):
 
+            passport = {pair[0]:pair[1] for field in potential_passport.split() for pair in field.split(':') }
+            
             passport = (field.split(':') for field in potential_passport.split())
 
             if all(checks[k](v) for k,v in passport):

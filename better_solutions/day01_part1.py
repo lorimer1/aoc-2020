@@ -14,6 +14,7 @@ def solve(puzzle_input):
     numbers = tuple(map(int, puzzle_input.splitlines()))
     matches = [x*y for (x,y) in combinations(numbers, 2) if x + y == 2020]
     return matches[0] # there will be only one match in the resulting matches collection 
+    
 
 if __name__ == '__main__':
     puzzle_input = aoc.puzzle_input(YEAR, DAY)
