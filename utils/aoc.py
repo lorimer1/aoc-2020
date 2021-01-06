@@ -9,14 +9,14 @@ import os
 def puzzle_input(year, day, is_original_solutions=True, is_test=False, extra=""):
 
     # use test folder for test input
-    folder = '\\input_tests' if is_test else 'input'
+    folder = os.path.join('','input_tests') if is_test else 'input'
 
     # path of this file
     path = os.path.dirname(__file__)
     path = os.path.abspath(os.path.join(path, os.pardir))
 
     # full path of the file required
-    filepath = f"{path}\\{folder}\\d{str(day)}{extra}.txt"
+    filepath = os.path.join(path, folder, f"d{str(day)}{extra}.txt")
 
     # if an aoc input file, check if already exists on pc otherwise download it
     if not is_test:
@@ -29,7 +29,7 @@ def puzzle_input(year, day, is_original_solutions=True, is_test=False, extra="")
             Copy this cookie content and paste it in a file called 'session.txt' and place it in the 'private' sub-directory of this project. """
             # if you want autodownload of input files, place the contents of the session cookie for advent of code from your browser
             # in a file called 'session.txt' in the sub-directory named private. Advent of code requires login for input data access.
-            session_filepath = f"{path}\\private\\session.txt"
+            session_filepath = os.path.join(path, 'private', 'session.txt')
             with open(session_filepath) as input_file:
                 user_session_id = input_file.read()
             user_agent = "aoc downloader"
